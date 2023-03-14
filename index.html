@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Tic Tac Toe</title>
+  </head>
+  <body>
+    <main>
+      <section class="welcome">
+        <div class="container">
+          <div class="row">
+            <div class="wrapper">
+              <h2>Tic Tac Toe</h2>
+              <p>Enter players' names and click play to start the game!</p>
+              <form class="player-info mt-2">
+                <div class="form-group">
+                  <label for="player1">X</label>
+                  <input
+                    type="text"
+                    id="player1"
+                    class="mt-1"
+                    placeholder="Player's 1 name"
+                  />
+                </div>
+                <div class="form-group mt-1">
+                  <label for="player2">O</label>
+                  <input
+                    type="text"
+                    id="player2"
+                    class="mt-1"
+                    placeholder="Player's 2 name"
+                  />
+                </div>
+                <button type="submit" class="mt-1">Play</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="gameboard hidden">
+        <div class="container">
+          <div class="row">
+            <div class="wrapper">
+              <h4 class="game-status"></h4>
+              <div class="mt-2" id="board">
+                <div class="cell text-center display-4"></div>
+                <div class="cell text-center display-4"></div>
+                <div class="cell text-center display-4"></div>
+                <div class="cell text-center display-4"></div>
+                <div class="cell text-center display-4"></div>
+                <div class="cell text-center display-4"></div>
+                <div class="cell text-center display-4"></div>
+                <div class="cell text-center display-4"></div>
+                <div class="cell text-center display-4"></div>
+              </div>
+              <button id="reset" class="mt-2">Restart</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

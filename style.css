@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@500;600;700&display=swap');
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+:root {
+    --c-navy: #212845;
+    --c-dark-grey: #121212;
+    --c-dark-navy: #0e121e;
+    --c-blue: #216efd;
+    --c-yellow: #f8d320;
+    --c-white: #fff;
+    --cell-size: 100px;
+    --mark-size: calc(var(--cell-size) * .9);
+}
+
+body {
+    background-color: var(--c-dark-grey);
+    color: var(--c-white);
+    font-family: 'Lexend Deca', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.mt-1 { margin-top: 1rem; }
+.mt-2 { margin-top: 2rem; }
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.row {
+    display: grid;
+    grid-column-start: 2;
+}
+
+.wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    text-align: center;
+}
+
+h2 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+p {
+    font-weight: 500;
+}
+
+form .form-group {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    background-color: transparent;
+    border: 2px solid var(--c-white);
+    color: var(--c-white);
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+button {
+    background-color: var(--c-white);
+    border: 2px solid var(--c-white);
+    cursor: pointer;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+}
+
+button:hover {
+    background-color: transparent;
+    color: var(--c-white);
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 300px;
+    place-self: center;
+    width: 300px;
+}
+
+.cell {
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+    font-size: 6rem;
+    height: var(--cell-size);
+    justify-content: center;
+    width: var(--cell-size);
+}
+
+.cell:nth-child(2),
+.cell:nth-child(5),
+.cell:nth-child(8) {
+    border-right: 2px solid var(--c-white);
+    border-left: 2px solid var(--c-white);
+}
+
+.cell:nth-child(1),
+.cell:nth-child(2),
+.cell:nth-child(3),
+.cell:nth-child(4),
+.cell:nth-child(5),
+.cell:nth-child(6) {
+    border-bottom: 2px solid var(--c-white);
+}
+
+#reset {
+    text-align: center;
+    width: -moz-fit-content;
+    width: fit-content;
+}
